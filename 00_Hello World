@@ -1,0 +1,13 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args) //程式進入點，由此開始執行。
+        {
+            Console.WriteLine("Hello World!"); //Console：標準輸出(螢幕)。
+            Console.ReadKey(); //讀入鍵盤指令。(此處作用類似System Pause。)
+        }
+    }
+}
