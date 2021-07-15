@@ -1,0 +1,21 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x, y, sum; //宣告整數。
+            string X, Y; //宣告字串。
+            Console.WriteLine("輸入第一個整數。");
+            X = Console.ReadLine(); //讀入字串。
+            Console.WriteLine("輸入第二個整數。");
+            Y = Console.ReadLine();
+            x = int.Parse(X); //將字串X轉換為整數x。
+            y = int.Parse(Y); //亦可使用y = Convert.ToInt(Y);
+            sum = x + y;
+            Console.WriteLine("Sum = {0}", sum); //{0}表第0個參數，即sum。
+        }
+    }
+}
