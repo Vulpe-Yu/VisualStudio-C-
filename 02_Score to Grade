@@ -1,0 +1,67 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double score; //宣告浮點數。
+            string S; //宣告字串。
+            Console.WriteLine("輸入分數。(0~100之間)");
+            S = Console.ReadLine(); //讀入字串。
+            score = double.Parse(S); //將字串S轉換為浮點數score。
+            if (score > 100 || score < 0) //判讀錯誤分數。
+            {
+                Console.WriteLine("Error score."); //錯誤訊息。
+            }
+            else //分數判讀。
+            {
+                if (score >= 89.5)
+                {
+                    Console.WriteLine("You got A+ !");
+                }
+                else if (score >= 84.5)
+                {
+                    Console.WriteLine("You got A !");
+                }
+                else if (score >= 79.5)
+                {
+                    Console.WriteLine("You got A-.");
+                }
+                else if (score >= 76.5)
+                {
+                    Console.WriteLine("You got B+.");
+                }
+                else if (score >= 72.5)
+                {
+                    Console.WriteLine("You got B.");
+                }
+                else if (score >= 69.5)
+                {
+                    Console.WriteLine("You got B-.");
+                }
+                else if (score >= 66.5)
+                {
+                    Console.WriteLine("You got C+.");
+                }
+                else if (score >= 62.5)
+                {
+                    Console.WriteLine("You got C.");
+                }
+                else if (score >= 59.5)
+                {
+                    Console.WriteLine("You got C-.");
+                }
+                else if (score >= 49.5)
+                {
+                    Console.WriteLine("You got D and Fail this course , try hard next time !");
+                }
+                else
+                {
+                    Console.WriteLine("You got E and Fail this course , try hard next time !");
+                }
+            }
+        }
+    }
+}
