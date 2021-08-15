@@ -1,0 +1,33 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n; //宣告整數。
+            int fac = 1;
+            string S; //宣告字串。
+            Console.WriteLine("輸入所求階乘數。");
+            S = Console.ReadLine(); //讀入字串。
+            n = int.Parse(S); //將字串S轉換為整數n。
+            if (n < 0) //判讀錯誤數字。
+            {
+                Console.WriteLine("Error."); //錯誤訊息。
+            }
+            else if (n == 0) //判讀0。
+            {
+                Console.WriteLine("0!=1"); //錯誤訊息。
+            }
+            else //結果運算。
+            {
+                for (int i = 1; i <= n; i++)
+                {
+                    fac = fac * i;
+                }
+                Console.WriteLine("{0}! = {1}", n, fac); //輸出結果。
+            }
+        }
+    }
+}
