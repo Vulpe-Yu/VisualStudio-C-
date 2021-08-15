@@ -1,0 +1,21 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int sum = 0; //宣告整數。
+            int input;
+            Console.WriteLine("正整數連加，結束程式請輸入0。");
+            while (true) //無窮迴圈，亦可使用for(;;)。
+            {
+                input = int.Parse(Console.ReadLine()); //讀入字串並轉換。
+                if (input <= 0) break;
+                sum += input; //等同於sum=sum+input。
+            }
+            Console.WriteLine("Sum = {0}", sum); //輸出結果。
+        }
+    }
+}
