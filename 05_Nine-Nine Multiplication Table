@@ -1,0 +1,24 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 1; //宣告乘數。
+            int b = 1; //宣告被乘數。
+            int s; //宣告計算結果。
+            Console.WriteLine("---------九九乘法表---------");
+            for (a = 1; a <= 9; a++) //乘數循環。
+            {
+                for (b = 1; b <= 9; b++) //被乘數循環。
+                {
+                    s = a * b;
+                    Console.WriteLine("{0,1}X{1,1}={2,2}  ", a, b, s); //,1或,2表輸出長度，均靠右對齊。
+                }
+                Console.WriteLine(); //換行用。
+            }
+        }
+    }
+}
