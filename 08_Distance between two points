@@ -1,0 +1,40 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Points A, B; //結構名稱宣告。(相當於Excel上方列)
+            double x, y, s;
+            Console.WriteLine("=====平面上兩座標點距離=====");
+            Console.WriteLine("輸入第一點X座標。");
+            A.x = double.Parse(Console.ReadLine());
+            Console.WriteLine("輸入第一點Y座標。");
+            A.y = double.Parse(Console.ReadLine());
+            Console.WriteLine("輸入第二點X座標。");
+            B.x = double.Parse(Console.ReadLine());
+            Console.WriteLine("輸入第二點Y座標。");
+            B.y = double.Parse(Console.ReadLine());
+            x = A.x - B.x;
+            y = A.y - B.y;
+            s = Distance(x, y);
+            Console.WriteLine("Distance = {0}", s);
+        }
+
+        static double Distance(double x, double y) //副函式宣告。
+        {
+            double s;
+            s = x * x + y * y;
+            s = Math.Sqrt(s);
+            return s;
+        }
+
+        struct Points //資料結構宣告。
+        {
+            public double x;
+            public double y;
+        } //內部宣告資料類型及代號。(相當於Excel左側欄)
+    }
+}
