@@ -1,0 +1,27 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double x, y, s;
+            Console.WriteLine("=====平面上座標點至原點距離=====");
+            Console.WriteLine("輸入X座標。");
+            x = double.Parse(Console.ReadLine());
+            Console.WriteLine("輸入Y座標。");
+            y = double.Parse(Console.ReadLine());
+            s = Distance(x, y);
+            Console.WriteLine("Distance = {0}", s);
+        }
+
+        static double Distance(double x, double y) //副函式宣告。
+        {
+            double s;
+            s = x * x + y * y;
+            s = Math.Sqrt(s);
+            return s;
+        }
+    }
+}
