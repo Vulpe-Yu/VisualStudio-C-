@@ -1,0 +1,53 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Point A = new Point(); //結構名稱宣告，同時實體化建構儲存區。
+            Point B = new Point();
+            Console.WriteLine("=====平面上兩座標點距離=====");
+            Console.WriteLine("輸入A點X座標。");
+            A.x = double.Parse(Console.ReadLine());
+            Console.WriteLine("輸入A點Y座標。");
+            A.y = double.Parse(Console.ReadLine());
+            Console.WriteLine("輸入A點Z座標。");
+            A.z = double.Parse(Console.ReadLine());
+            Console.WriteLine("輸入B點X座標。");
+            B.x = double.Parse(Console.ReadLine());
+            Console.WriteLine("輸入B點Y座標。");
+            B.y = double.Parse(Console.ReadLine());
+            Console.WriteLine("輸入B點Z座標。");
+            B.z = double.Parse(Console.ReadLine());
+            Console.WriteLine("AO = {0} , BO = {1} , AB = {2}", A.DistanceO(), B.DistanceO(), A.DistanceP(B));
+        }
+
+        class Point //類別宣告。
+        {
+            public double x;
+            public double y;
+            public double z; //內部宣告資料類型及代號。(相當於Excel左側欄)
+
+            public double DistanceO() //副函式宣告，僅使用此類別中的值，無須傳入。
+            {
+                double s;
+                s = this.x * this.x + this.y * this.y + this.z * this.z; //this.x為此類別中的x值。
+                s = Math.Sqrt(s);
+                return s;
+            }
+
+            public double DistanceP(Point P) //副函式宣告，與其他欄中的值相關，需傳入。
+            {
+                double a, b, c, s;
+                a = this.x - P.x;
+                b = this.y - P.y;
+                c = this.z - P.z;
+                s = a * a + b * b + c * c;
+                s = Math.Sqrt(s);
+                return s;
+            }
+        }
+    }
+}
